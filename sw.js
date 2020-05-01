@@ -1,13 +1,13 @@
-const staticCacheName = 'static-cache-v0';
-const dynamicCacheName = 'dynamic-cache-v0';
+// const staticCacheName = 'static-cache-v0';
+// const dynamicCacheName = 'dynamic-cache-v0';
 
-const staticAssets = [
-    './',
-    './index.html',
-    './style.css',
-    './app.js',
-    './main.js',
-];
+// const staticAssets = [
+//     './',
+//     './index.html',
+//     './style.css',
+//     './app.js',
+//     './main.js',
+// ];
 self.addEventListener('install', (event) => {
     event.waitUntil(
       caches.open('v2').then((cache) => {
