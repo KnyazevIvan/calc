@@ -4,6 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <link rel='manifest' href='/maifest.json'>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+
+      navigator.serviceWorker.register('./sw.js')
+        .then(registration => {
+          console.log('Service worker successfully registered', registration);
+        })
+        .catch(error => {
+          console.log('Service worker registration failed', error);
+        });
+    }
+
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
@@ -15,7 +29,8 @@
 <body>
 
   <div class="wrapper">
-<div class="calc-body">
+  
+    <div class="calc-body">
       <div class="display">
         <div class="input"></div>
         <div class="result"></div>
@@ -30,29 +45,29 @@
       <input class="button" value="4" type="button">
       <input class="button" value="5" type="button">
       <input class="button" value="6" type="button">
-   
+
       <input class="button" value="3" type="button">
       <input class="button" value="3" type="button">
       <input class="button" value="2" type="button">
-     
+
       <input class="button" value="1" type="button">
       <input class="button plus" value="+" type="button">
       <input class="button" value="0" type="button">
       <input class="button" value="00" type="button">
       <input class="button" value="." type="button">
       <input class="button" value="=" type="button">
-    </input>
+      </input>
 
- 
-     
+
+
+    </div>
+
+
+
+
+
   </div>
 
-
-
-
-
-  </div>
-  <script src="app.js"></script>
   <script src='main.js'></script>
 </body>
 
