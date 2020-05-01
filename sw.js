@@ -4,13 +4,9 @@ const dynamicCacheName = 'dynamic-cache-v0';
 const staticAssets = [
     './',
     './index.html',
-    './images/icons/icon-128x128.png',
-    './images/icons/icon-192x192.png',
-    './offline.html',
-    './css/main.css',
-    './js/app.js',
-    './js/main.js',
-    './images/no-image.jpg'
+    './style.css',
+    './app.js',
+    './main.js',
 ];
 
 self.addEventListener('install', async event => {
