@@ -6,87 +6,87 @@
 	"display" : "standalone",
 	"start_url" : "https://xenodochial-bardeen-566f74.netlify.app/",
 	"short_name" : "Calculator",
-	"theme_color" : "transparent",
+	"theme_color" : "#091924",
 	"description" : "",
 	"orientation" : "any",
-	"background_color" : "#0a0d52",
+	"background_color" : "#091924",
 	"related_applications" : [],
 	"prefer_related_applications" : false,
 	"icons" : [
 		{
-			"src": "[Embedded]",
+			"src": "logo/44.png",
 			"sizes": "44x44"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/48.png",
 			"sizes": "48x48"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/600.png",
 			"sizes": "1240x600"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/300.png",
 			"sizes": "300x300"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/150.png",
 			"sizes": "150x150"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/88.png",
 			"sizes": "88x88"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/24.png",
 			"sizes": "24x24"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/50.png",
 			"sizes": "50x50"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/6203x300.png",
 			"sizes": "620x300"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/192.png",
 			"sizes": "192x192"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/144.png",
 			"sizes": "144x144"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/96.png",
 			"sizes": "96x96"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/72.png",
 			"sizes": "72x72"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/36.png",
 			"sizes": "36x36"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/1024.png",
 			"sizes": "1024x1024"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/180.png",
 			"sizes": "180x180"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/152.png",
 			"sizes": "152x152"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/120.png",
 			"sizes": "120x120"
 		},
 		{
-			"src": "[Embedded]",
+			"src": "logo/76.png",
 			"sizes": "76x76"
 		}],
 	"url" : "https://xenodochial-bardeen-566f74.netlify.app/",
