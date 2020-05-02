@@ -16,6 +16,15 @@ for (const el of btn) {
 
 function calc() {
 
+
+  this.style.background='#64d735';
+  setTimeout(() => {
+    if (this.dataset.value==='C')
+    this.style.background='#ff2d7a';
+    else
+    this.style.background='#0c2433';
+  }, 100);
+
   if (afterEqual) {
     console.log('нахуй ты здесь')
     input.style.display = 'block'
