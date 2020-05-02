@@ -2,6 +2,7 @@ body {
   background-color: #091924;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-y: hidden;
 }
 
 .wrapper {
