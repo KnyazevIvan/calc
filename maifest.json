@@ -4,7 +4,7 @@
 	"name" : "Calculator",
 	"scope" : "/",
 	"display" : "standalone",
-	"start_url" : "https://xenodochial-bardeen-566f74.netlify.app/",
+	"start_url" : "https://vigilant-keller-8cfb86.netlify.app/",
 	"short_name" : "Calculator",
 	"theme_color" : "#091924",
 	"description" : "",
@@ -89,7 +89,7 @@
 			"src": "logo/76.png",
 			"sizes": "76x76"
 		}],
-	"url" : "https://xenodochial-bardeen-566f74.netlify.app/",
+	"url" : "https://vigilant-keller-8cfb86.netlify.app/",
 	"screenshots" : [],
 	"generated" : "true"
 }
