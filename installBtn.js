@@ -15,8 +15,7 @@ closeBtn.addEventListener('click', function(){
   localStorage.setItem('allowDownloadButton', false)
   btnWrapper.style.display='none';
 })
-addBtn.style.display = 'none';
-btnWrapper.style.display='none';
+
 
 if(localStorage.allowDownloadButton!=='false'){
 
