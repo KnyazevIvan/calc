@@ -19,7 +19,6 @@ closeBtn.addEventListener('click', function(){
 
 if(localStorage.allowDownloadButton!=='false'){
 
-alert('Все работает')
 
 window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
