@@ -91,7 +91,8 @@ body {
 
 .add-button {
   position: absolute;
-  top: 1px;
-  left: 1px;
+  bottom: 0px;
+  width: 100vw;
+  height: 60px;
 }
 /*# sourceMappingURL=style.css.map */
