@@ -20,7 +20,6 @@ btnWrapper.style.display='none';
 
 if(localStorage.allowDownloadButton!=='false'){
 
-alert(localStorage.allowDownloadButton)
 
 
 window.addEventListener('beforeinstallprompt', (e) => {
