@@ -1,11 +1,11 @@
 {
 	"dir" : "ltr",
 	"lang" : "Russian",
-	"name" : "Calculator",
+	"name" : "Калькулятор",
 	"scope" : "/",
 	"display" : "standalone",
 	"start_url" : "https://vigilant-keller-8cfb86.netlify.app/",
-	"short_name" : "Calculator",
+	"short_name" : "Калькулятор",
 	"theme_color" : "#091924",
 	"description" : "",
 	"orientation" : "any",
