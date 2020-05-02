@@ -3,7 +3,7 @@ input = document.querySelector('.input')
 result = document.querySelector('.result')
 afterEqual = false;
 
-let leftValue = 0;
+let left = 0;
 let sign = '';
 
 
@@ -19,36 +19,36 @@ function calc() {
     result.classList.remove('show');
     afterEqual = false;
     result.innerHTML = '';
-    if (this.value != '+' && this.value != '-' && this.value != '*' && this.value != '/' && this.value != '=') {
+    if (this.dataset.value != '+' && this.dataset.value != '-' && this.dataset.value != '*' && this.dataset.value != '/' && this.dataset.value != '=') {
       input.innerHTML = '';
     }
   }
 
-  if (this.value === '+') {
+  if (this.dataset.value === '+') {
     sign = '+';
-    leftValue = input.innerHTML
+    left = input.innerHTML
   }
 
-  if (this.value === '-') {
+  if (this.dataset.value === '-') {
     sign = '-';
-    leftValue = input.innerHTML
+    left = input.innerHTML
   }
 
 
-  if (this.value === '*') {
+  if (this.dataset.value === '*') {
     sign = '*';
-    leftValue = input.innerHTML;
+    left = input.innerHTML;
   }
 
 
-  if (this.value === '/') {
+  if (this.dataset.value === '/') {
     sign = '/';
-    leftValue = input.innerHTML;
+    left = input.innerHTML;
   }
 
-  if (this.value === '=') {
-    console.log('right value',input.innerHTML.slice(leftValue.length + 1))
-    if (input.innerHTML.slice(leftValue.length + 1).length!==0)
+  if (this.dataset.value === '=') {
+    console.log('right dataset.value',input.innerHTML.slice(left.length + 1))
+    if (input.innerHTML.slice(left.length + 1).length!==0)
     {
       equal();
     }
@@ -56,54 +56,54 @@ function calc() {
     return;
   }
 
-  input.innerHTML += this.value
+  input.innerHTML += this.dataset.value
 
 
 
-  if (this.value === 'C') {
+  if (this.dataset.value === 'C') {
     input.innerHTML = '';
     result.innerHTML = '';
     sign = '';
   }
 
-  if (sign != '' && input.innerHTML.slice(leftValue.length + 1).length !== 0) {
-    prevCalc(input.innerHTML.slice(leftValue.length + 1))
+  if (sign != '' && input.innerHTML.slice(left.length + 1).length !== 0) {
+    prevCalc(input.innerHTML.slice(left.length + 1))
   }
 
 }
 
-function prevCalc(rightValue) {
-  console.log(leftValue, rightValue.length)
+function prevCalc(right) {
+  console.log(left, right.length)
 
 
-  if (sign === '+' && (!leftValue.includes('+')) && (!leftValue.includes('-')) && (!leftValue.includes('*')) && (!leftValue.includes('/'))) {
-    result.innerHTML = Number(leftValue) + Number(rightValue)
+  if (sign === '+' && (!left.includes('+')) && (!left.includes('-')) && (!left.includes('*')) && (!left.includes('/'))) {
+    result.innerHTML = Number(left) + Number(right)
   }
   else if (sign === '+') {
-    result.innerHTML = Number(result.innerHTML) + Number(rightValue)
+    result.innerHTML = Number(result.innerHTML) + Number(right)
   }
 
-  if (sign === '-' && (!leftValue.includes('+')) && (!leftValue.includes('-')) && (!leftValue.includes('*')) && (!leftValue.includes('/'))) {
-    result.innerHTML = Number(leftValue) - Number(rightValue)
+  if (sign === '-' && (!left.includes('+')) && (!left.includes('-')) && (!left.includes('*')) && (!left.includes('/'))) {
+    result.innerHTML = Number(left) - Number(right)
   }
   else if (sign === '-') {
-    result.innerHTML = Number(result.innerHTML) - Number(rightValue)
+    result.innerHTML = Number(result.innerHTML) - Number(right)
   }
 
-  if (sign === '/' && (!leftValue.includes('+')) && (!leftValue.includes('-')) && (!leftValue.includes('*')) && (!leftValue.includes('/'))) {
-    result.innerHTML = Number(leftValue) / Number(rightValue)
+  if (sign === '/' && (!left.includes('+')) && (!left.includes('-')) && (!left.includes('*')) && (!left.includes('/'))) {
+    result.innerHTML = Number(left) / Number(right)
   }
   else if (sign === '/') {
-    result.innerHTML = Number(result.innerHTML) / Number(rightValue)
+    result.innerHTML = Number(result.innerHTML) / Number(right)
   }
 
-  if (sign === '*' && (!leftValue.includes('+')) && (!leftValue.includes('-')) && (!leftValue.includes('*')) && (!leftValue.includes('/'))) {
+  if (sign === '*' && (!left.includes('+')) && (!left.includes('-')) && (!left.includes('*')) && (!left.includes('/'))) {
     console.log('нахуя')
-    result.innerHTML = Number(leftValue) * Number(rightValue)
+    result.innerHTML = Number(left) * Number(right)
   }
   else if (sign === '*') {
     console.log('правильгл', result.innerHTML)
-    result.innerHTML = Number(result.innerHTML) * Number(rightValue)
+    result.innerHTML = Number(result.innerHTML) * Number(right)
   }
 }
 
