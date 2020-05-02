@@ -18,8 +18,7 @@ closeBtn.addEventListener('click', function(){
 
 
 if(localStorage.allowDownloadButton!=='false'){
-
-
+alert('все ок')
 window.addEventListener('beforeinstallprompt', (e) => {
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
@@ -30,7 +29,6 @@ window.addEventListener('beforeinstallprompt', (e) => {
   btnWrapper.style.display='block';
   addBtn.addEventListener('click', (e) => {
     // hide our user interface that shows our A2HS button
-    addBtn.style.display = 'none';
     btnWrapper.style.display='none';
     // Show the prompt
     deferredPrompt.prompt();
