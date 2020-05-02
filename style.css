@@ -29,6 +29,7 @@ body {
   width: 100%;
   background-color: white;
   height: 130px;
+  position: relative;
 }
 
 .button {
@@ -55,14 +56,26 @@ body {
 
 .input {
   display: block;
-  font-size: 24px;
+  font-size: 30px;
   text-align: end;
-  margin-top: 20px;
+  right: 0px;
+  top: 30%;
+  position: absolute;
 }
 
 .result {
   display: block;
   font-size: 24px;
   text-align: end;
+  right: 0px;
+  top: 60%;
+  position: absolute;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.show {
+  top: 30%;
+  font-size: 30px;
 }
 /*# sourceMappingURL=style.css.map */
