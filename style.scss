@@ -12,6 +12,7 @@ body{
   margin-right: auto;
   display: flex;
   justify-content: center;
+ 
 }
 .calc-body{
 
@@ -23,6 +24,7 @@ body{
   width: 100%;
   background-color: white;
   height: 130px;
+ 
 }
 
 .button{
@@ -43,4 +45,16 @@ body{
   height: $height*2+px;
   position: relative;
  margin-top: -$height+px;
+}
+
+.input {
+  display: block;
+  font-size: 24px;
+  text-align: end;
+  margin-top: 20px;
+}
+.result {
+  display: block;
+  font-size: 24px;
+  text-align: end;
 }

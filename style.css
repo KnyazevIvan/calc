@@ -52,4 +52,17 @@ body {
   position: relative;
   margin-top: -65px;
 }
+
+.input {
+  display: block;
+  font-size: 24px;
+  text-align: end;
+  margin-top: 20px;
+}
+
+.result {
+  display: block;
+  font-size: 24px;
+  text-align: end;
+}
 /*# sourceMappingURL=style.css.map */

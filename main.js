@@ -12,97 +12,88 @@ for (const el of btn) {
 
 function calc() {
   console.log(sign)
-
-  if (result.innerHTML !== '') {
-    result.innerHTML = '';
-  }
-
-
-
+  
   if (this.value === '+') {
-    if (sign !== '') {
-      equal();
-      return;
-    }
-    else {
-      sign = '+';
-      leftValue = input.innerHTML
-    }
+    sign = '+';
+    leftValue = input.innerHTML
   }
-  
+
   if (this.value === '-') {
-    if (sign !== '') {
-      equal();
-      return;
-    }
-    else {
-      sign = '-';
-      leftValue = input.innerHTML
-    }
+    sign = '-';
+    leftValue = input.innerHTML
   }
-  
+
 
   if (this.value === '*') {
-    if (sign !== '') {
-      equal();
-      return;
-    }
-    else {
       sign = '*';
-      leftValue = input.innerHTML
-    }
+      leftValue = input.innerHTML;
   }
 
 
   if (this.value === '/') {
-    if (sign !== '') {
-      equal();
-      return;
-    }
-    else {
       sign = '/';
-      leftValue = input.innerHTML
-    }
+      leftValue = input.innerHTML;
   }
 
   if (this.value === '=') {
-    equal();
+    input.innerHTML = result.innerHTML;
+    sign = '';
     return;
   }
 
-
-
-
-
-
   input.innerHTML += this.value
 
+
+
   if (this.value === 'C') {
-    input.innerHTML = ''
+    input.innerHTML = '';
+    result.innerHTML = '';
+    sign = '';
   }
 
+  if (sign != '' && input.innerHTML.slice(leftValue.length + 1).length!==0 ) {
+    prevCalc(input.innerHTML.slice(leftValue.length + 1))
+  }
 
 }
 
-function equal() {
+function prevCalc(rightValue) {
+  console.log(leftValue, rightValue.length)
 
-  let rightValue = input.innerHTML.slice(leftValue.length + 1);
-  console.log(leftValue, rightValue)
-  if (sign === '+') {
+
+  if (sign === '+' && (!leftValue.includes('+')) && (!leftValue.includes('-')) && (!leftValue.includes('*')) && (!leftValue.includes('/'))) {
     result.innerHTML = Number(leftValue) + Number(rightValue)
   }
-  if (sign === '-') {
+  else if (sign === '+') {
+    result.innerHTML = Number(result.innerHTML) + Number(rightValue)
+  }
+
+  if (sign === '-' && (!leftValue.includes('+')) && (!leftValue.includes('-')) && (!leftValue.includes('*')) && (!leftValue.includes('/'))) {
     result.innerHTML = Number(leftValue) - Number(rightValue)
   }
-  if (sign === '*') {
-    result.innerHTML = Number(leftValue) * Number(rightValue)
+  else if (sign === '-') {
+    result.innerHTML = Number(result.innerHTML) - Number(rightValue)
   }
-  if (sign === '/') {
+
+  if (sign === '/' && (!leftValue.includes('+')) && (!leftValue.includes('-')) && (!leftValue.includes('*')) && (!leftValue.includes('/'))) {
     result.innerHTML = Number(leftValue) / Number(rightValue)
   }
+  else if (sign === '/') {
+    result.innerHTML = Number(result.innerHTML) / Number(rightValue)
+  }
 
-  input.innerHTML = result.innerHTML; 
+  if (sign === '*' && (!leftValue.includes('+')) && (!leftValue.includes('-')) && (!leftValue.includes('*')) && (!leftValue.includes('/'))) {
+    console.log('нахуя')
+    result.innerHTML = Number(leftValue) * Number(rightValue)
+  }
+  else if (sign === '*') {
+    console.log('правильгл',result.innerHTML)
+    result.innerHTML = Number(result.innerHTML) * Number(rightValue)
+  }
+}
 
-  rightValue = '';
+function equal(clear) {
+
+
   sign = '';
 }
