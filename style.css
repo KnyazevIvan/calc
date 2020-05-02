@@ -90,8 +90,21 @@ body {
 }
 
 .add-button {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #ff2d7a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button-wrapper {
+  color: white;
+  background-color: #13354b;
   position: absolute;
-  bottom: 0px;
+  left: 0px;
+  bottom: 1px;
   width: 100vw;
   height: 60px;
 }
