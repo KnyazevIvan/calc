@@ -6,19 +6,7 @@
   <link rel='manifest' href='/maifest.json'>
 
 
-  <script>
-    if ('serviceWorker' in navigator) {
 
-      navigator.serviceWorker.register('./sw-register.js')
-        .then(registration => {
-          console.log('Service worker successfully registered', registration);
-        })
-        .catch(error => {
-          console.log('Service worker registration failed', error);
-        });
-    }
-
-  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
@@ -34,7 +22,7 @@
 
     <div class="calc-body">
       <div class="display">
-        
+
         <div class="input"></div>
         <div class="result"></div>
       </div>
@@ -69,9 +57,20 @@
 
 
 
+    <pwa-install showopen>Install</pwa-install>
   </div>
 
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
+
   <script src='main.js'></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/service-worker.js");
+    }
+
+  </script>
 </body>
 
 </html>
