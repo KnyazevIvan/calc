@@ -42,6 +42,7 @@ body {
   background-color: #0c2433;
   border: 0px;
   color: white;
+  cursor: pointer;
   font-size: 23px;
   -webkit-box-shadow: 0 0 1px black;
           box-shadow: 0 0 1px black;
