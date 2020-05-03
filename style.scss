@@ -3,7 +3,8 @@ $height: 65;
 body{
   background-color: #091924;
   box-sizing: border-box;
-  overflow-y: hidden
+  overflow-y: hidden;
+  user-select: none;
 }
 
 .wrapper{

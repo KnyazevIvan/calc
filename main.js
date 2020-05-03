@@ -11,7 +11,7 @@ let sign = '';
 
 
 for (const el of btn) {
-  el.addEventListener('click', calc);
+  el.addEventListener('mousedown', calc);
 }
 
 function calc() {
